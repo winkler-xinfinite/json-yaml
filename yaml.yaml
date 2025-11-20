@@ -1,0 +1,64 @@
+app: exinfinite
+ver: 1
+
+usr:
+  id: 1
+  n: Winkler
+  rol:
+    - own
+    - dev
+  info:
+    loc:
+      pais: PE
+      city: Pich
+    bio: |
+      dev js
+      linux user
+      founder exinf
+    net:
+      gh: xinfinite
+      web: exinfinite.com
+
+srv:
+  http:
+    p: 80
+    ssl: false
+  api:
+    p: 3000
+    ratelimit:
+      max: 100
+      win: 60
+
+db:
+  type: pg
+  auth: &creds
+    u: root
+    pw: 1234
+  conn:
+    h: localhost
+    p: 5432
+    <<: *creds
+
+items:
+  - id: 1
+    meta:
+      t: A
+      tags: [x, y, z]
+    val: 10
+  - id: 2
+    meta:
+      t: B
+      tags: [a, b]
+    val: 20
+
+cfg:
+  m: prod
+  log: 1
+  feat:
+    cache:
+      on: true
+      ttl: 300
+    exp:
+      x1: true
+      x2: false
+

@@ -1,0 +1,86 @@
+{
+  "app": "exinf",
+  "ver": 1,
+
+  "usr": {
+    "id": 1,
+    "n": "Winkler",
+    "ok": true,
+    "bio": "dev js linux",
+    "loc": { "ct": "Pich", "pa": "PE" },
+
+    "roles": ["own", "dev", "adm"],
+
+    "perm": {
+      "sys": [1, 2, 3],
+      "app": [
+        { "id": 1, "nm": "edit", "ok": true },
+        { "id": 2, "nm": "del", "ok": false }
+      ]
+    },
+
+    "net": {
+      "gh": "xinfinite",
+      "web": "exinfinite.com",
+      "soc": [
+        { "t": "ig", "u": "winkler" },
+        { "t": "tt", "u": "infinity" }
+      ]
+    }
+  },
+
+  "srv": {
+    "http": { "p": 80, "ssl": false },
+    "api": {
+      "p": 3000,
+      "rl": { "max": 100, "win": 60 }
+    }
+  },
+
+  "db": {
+    "t": "pg",
+    "conn": {
+      "h": "localhost",
+      "p": 5432,
+      "u": "root",
+      "pw": "1234"
+    }
+  },
+
+  "items": [
+    {
+      "id": 1,
+      "meta": {
+        "t": "A",
+        "tags": ["x", "y", "z"],
+        "sub": [
+          { "k": "a", "v": 10 },
+          { "k": "b", "v": 20 }
+        ]
+      },
+      "val": 99.5
+    },
+    {
+      "id": 2,
+      "meta": {
+        "t": "B",
+        "tags": ["m", "n"],
+        "sub": [
+          { "k": "c", "v": 30 },
+          { "k": "d", "v": 40 }
+        ]
+      },
+      "val": null
+    }
+  ],
+
+  "cfg": {
+    "m": "prod",
+    "log": 1,
+    "feat": {
+      "cache": { "on": true, "ttl": 300 },
+      "exp": { "x1": true, "x2": false }
+    }
+  }
+}
+
